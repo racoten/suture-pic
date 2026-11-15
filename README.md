@@ -8,7 +8,7 @@
 
 Suture uses [Crystal Palace](https://tradecraftgarden.org/docs.html) to build a flat binary that pairs a position-independent loader (PIC) with a modular PICO payload. Projects compose capability libraries at link time with `mergelib`. The demo registers modules at startup and dispatches incoming commands by name. A small Go server logs TCP and HTTP traffic for inspection.
 
-[Read the lab write-up](https://racoten.gitbook.io/red-team-development-and-operations/crystal-palace-agent-framework)
+[Read the lab write-up](https://racoten.gitbook.io/red-team-development-and-operations/suture)
 
 > **Lab status.** Seven variants were compiled and linked. Runtime behavior remains unverified. Static disassembly shows the demo's resolver calling itself while trying to resolve `GetModuleHandleA`. The WinHTTP HTTPS path requests exceptions for several server certificate errors. Use this project in an isolated, authorized lab.
 
